@@ -1,39 +1,47 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    </head>
-    <body>
-    
-        <div id ="hero">
-            <div> 
-                <h4 id="hero-title">Metric/Imperial unit conversion</h4> </div>
-            <div>
-                <input id="yourNumber" type="number" value="0"></div>
-            <div>
-                <button id="submitBtn">SUBMIT</button></div>
-            <div>
-                <h1 id="numberStat"></h1> </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+      
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+    <title>Unit converter</title>
+</head>
+<body>
+
+
+    <main>
+        <div class ="hero"> 
+            <h1>Metric/Imperial unit conversion</h1>
+            <form>
+                <input id="yourNumber" type="number" value="0">
+                <button id="submitBtn">CONVERT</button>
+            </form>
         </div>
         <div class="calculation" id="unitCalculation">
-            <div class="lengthResult">
                 <h3 class="result-subtitle">Length (Meter/Feet)</h3>
                 <p class="result" id="length-el"></p>
-            </div>
-            <div class="volumeResult">
                 <h3 class="result-subtitle">Volume (Liters/Gallons)</h3>
                 <p class="result" id="volume-el"></p>
-            </div>
-            <div class="massResult">
                 <h3 class="result-subtitle">Mass (Kilograms/Pounds)</h3>
                 <p class="result" id="mass-el"></p>
-            </div> 
         <div>
-        
-        <script src="index.js"></script>
-    </body>
+
+    </main>
+    
+    
+    <script src="index.js"></script>
+    
+</body>
 </html>
+
+
+
+

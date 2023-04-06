@@ -1,85 +1,58 @@
-#hero {
-  background: linear-gradient(#10b680, rgb(0, 119, 255));
-  display: block;
-  max-width: 550px;
-  height: 260px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 53px;
+* {
+  box-sizing: border-box;
 }
 
-#hero-title {
-  font-size: 22px;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  color: #fff;
-}
-
-#submitBtn {
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #fff;
-  border-radius: 8px;
-  border: 1px solid #fff;
-  color: #10b680;
-}
-
-#submitBtn:hover {
-  font-weight: bold;
-}
-#yourNumber {
-  margin-top: 0px;
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  width: 100px;
-  line-heigth: 25px;
-  font-size: 60px;
-  text-align: center;
-  font-weight: 800;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.calculation {
-  text-align: center;
-  padding: 38px 102px;
-  font-size: 14px;
-}
-
-.lengthResult,
-.volumeResult,
-.massResult {
-  margin-top: 27px;
-  padding: 1px;
-}
-.result-subtitle {
-  color: #1a1921;
-  margin-top: 0px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-}
-.result {
-  color: #4e4e4e;
-  margin-bottom: 0px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-}
-html,
 body {
-  max-width: 550px;
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", sans-serif;
+  margin: 0 auto;
+  font-family: "Overpass", sans-serif;
+}
+
+.hero {
+  text-align: center;
+  background: #f953c6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b91d73,
+    #f953c6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b91d73,
+    #f953c6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 3em 2em;
+  color: #fff;
+}
+
+input,
+button {
+  display: block;
+  margin: 0 auto;
+  width: 30vw;
+  border-radius: 6px;
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+}
+
+input {
+  font-size: 4rem;
+  height: 100px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  font-weight: 800;
+  background-color: transparent;
+  padding-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+button {
+  background-color: #f8f8f8;
+  color: #b91d73;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 1em;
+  text-align: center;
+  border: none;
 }
