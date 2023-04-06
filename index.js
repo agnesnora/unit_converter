@@ -1,62 +1,34 @@
-// javascript
-convert ()
+let unitCalculationHtml = document.getElementById("unitCalculation");
+let inputEl = document.getElementById("yourNumber");
+let yourNumber;
 
-function convert(){
-    
-    let numberEl=document.getElementById("numberStat")
-console.log(numberEl)
+function convertNumber() {
+  yourNumber = inputEl.value;
+  const meterToFeet = yourNumber * 3.3;
+  const feetToMeter = yourNumber / 3.3;
+  const kiloToPound = yourNumber * 2.2;
+  const poundToKilo = yourNumber / 2.2;
+  const literToGallon = yourNumber * 0.26;
+  const gallonToLiter = yourNumber * 3.785;
 
+  document.getElementById(
+    "length-el"
+  ).innerHTML = `${yourNumber} meters = ${meterToFeet.toFixed(
+    3
+  )} ft | ${yourNumber} ft = ${feetToMeter.toFixed(3)} meters`;
 
-let lengthEl=document.getElementById("length-el")
-let volEl=document.getElementById("volume-el")
-let massEl=document.getElementById("mass-el")
+  document.getElementById(
+    "volume-el"
+  ).innerHTML = `${yourNumber} liters = ${literToGallon.toFixed(
+    3
+  )} gallons | ${yourNumber} gallons = ${gallonToLiter.toFixed(3)} liters
+  `;
 
-//1m=3.3ft    1l=0.26 gallon  1kg=2.2pounds//
-
-let yourNumber=document.getElementById("yourNumber").value
-
-let number = ""
-numberEl.innerText=number
-
-//Meter to feet//
-let meterToFeet =yourNumber*3.3
-meterToFeet=meterToFeet.toFixed(3)
-console.log(meterToFeet)
-let feetToMeter = yourNumber/3.3
-feetToMeter=feetToMeter.toFixed(3)
-console.log(feetToMeter)
-
-   lengthEl.textContent=yourNumber + " meters = " + meterToFeet + " ft" + " I " + yourNumber + " ft = " + feetToMeter + " meters "
-
-//Liter to gallon//
-
-let literToGallon=yourNumber*0.26
-literToGallon=literToGallon.toFixed(3)
-console.log(literToGallon)
-let gallonToLiter=yourNumber*3.785
-gallonToLiter=gallonToLiter.toFixed(3)
-console.log(gallonToLiter)
-
-   volEl.textContent=yourNumber+" liters = " + literToGallon + " gallons " + " I " + yourNumber + " gallons = " + gallonToLiter + " liters "
-//Kilos to pounds//
-
-let kiloToPound=yourNumber*2.2
-kiloToPound=kiloToPound.toFixed(3)
-console.log(kiloToPound)
-let poundToKilo=yourNumber/2.2
-poundToKilo=poundToKilo.toFixed(3)
-console.log(poundToKilo)
-
-
-   massEl.textContent=yourNumber + " kilos = " + kiloToPound + " pounds " + " I " + yourNumber + " pounds = " + poundToKilo + " kilos "
-
-    
-    
-    
-    
-    
-    
-    yourNumber=document.getElementById("yourNumber").value
-    console.log(yourNumber + "yourNumber")
+  document.getElementById(
+    "mass-el"
+  ).innerHTML = `${yourNumber} kilos = ${kiloToPound.toFixed(
+    3
+  )} | ${yourNumber} pounds = ${poundToKilo.toFixed(3)} kilos`;
 }
 
+document.getElementById("submitBtn").addEventListener("click", convertNumber);
