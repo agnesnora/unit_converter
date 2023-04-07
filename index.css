@@ -24,6 +24,10 @@ body {
   color: #fff;
 }
 
+.calculation {
+  text-align: center;
+}
+
 input,
 button {
   display: block;
@@ -55,4 +59,33 @@ button {
   padding: 1em;
   text-align: center;
   border: none;
+}
+
+Chrome,
+Safari,
+Edge,
+Opera input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media (min-width: 597px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero,
+  .calculation {
+    min-width: 50%;
+    min-height: 100vh;
+    padding: 5em 2em;
+  }
 }
