@@ -1,9 +1,7 @@
-let unitCalculationHtml = document.getElementById("unitCalculation");
-let inputEl = document.getElementById("yourNumber");
-let yourNumber;
+document.getElementById("submitBtn").addEventListener("click", convertNumber);
 
 function convertNumber() {
-  yourNumber = inputEl.value;
+  let yourNumber = document.getElementById("yourNumber").value;
   const meterToFeet = yourNumber * 3.3;
   const feetToMeter = yourNumber / 3.3;
   const kiloToPound = yourNumber * 2.2;
@@ -22,7 +20,7 @@ function convertNumber() {
   ).innerHTML = `${yourNumber} liters = ${literToGallon.toFixed(
     3
   )} gallons | ${yourNumber} gallons = ${gallonToLiter.toFixed(3)} liters
-  `;
+      `;
 
   document.getElementById(
     "mass-el"
@@ -30,5 +28,3 @@ function convertNumber() {
     3
   )} | ${yourNumber} pounds = ${poundToKilo.toFixed(3)} kilos`;
 }
-
-document.getElementById("submitBtn").addEventListener("click", convertNumber);
